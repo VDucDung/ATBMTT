@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="encode-container">
+        <h1 class="heading">Mã hóa DES</h1>
+
+        <div class="encode-group">
+          <label for="encode-plant-text">Bản rõ</label>
+          <textarea
+            id="encode-plant-text"
+            name="encode-plant-text"
+            rows="4"
+            cols="auto"
+            placeholder="Nhập bản rõ ở đây"
+          ></textarea>
+        </div>
+
+        <div class="encode-group">
+          <label for="encode-file-input">Tải file lên</label>
+          <input type="file" id="encode-file-input" name="encode-file-input" />
+        </div>
+
+        <div class="encode-group">
+          <label for="encode-key-input">Khóa</label>
+          <input type="text" id="encode-key-input" name="encode-key-input" />
+        </div>
+
+        <div class="encode-group">
+          <button
+            id="encode-button"
+            class="encode-button"
+            onclick="enCodeDes()"
+          >
+            Mã hóa
+          </button>
+        </div>
+
+        <div class="encode-group">
+          <label for="encode-cipher-text">Kết quả</label>
+          <textarea
+            id="encode-cipher-text"
+            name="encode-cipher-text"
+            rows="4"
+            cols="auto"
+            placeholder="Kết quả mã hóa ở đây"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="decode-container">
+        <h1 class="heading">Giải mã DES</h1>
+
+        <div class="decode-group">
+          <label for="decode-plant-text">Bản mã</label>
+          <textarea
+            id="decode-plant-text"
+            name="decode-plant-text"
+            rows="4"
+            cols="auto"
+            placeholder="Nhập bản mã ở đây"
+          ></textarea>
+        </div>
+
+        <div class="decode-group">
+          <label for="decode-file-input">Tải file lên</label>
+          <input type="file" id="decode-file-input" name="decode-file-input" />
+        </div>
+
+        <div class="decode-group">
+          <label for="decode-key-input">Khóa</label>
+          <input type="text" id="decode-key-input" name="decode-key-input" />
+        </div>
+
+        <div class="decode-group">
+          <button
+            id="decode-button"
+            class="decode-button"
+            onclick="decodeDes()"
+          >
+            Giải mã
+          </button>
+        </div>
+
+        <div class="decode-group">
+          <label for="decode-cipher-text">Kết quả</label>
+          <textarea
+            id="decode-cipher-text"
+            name="decode-cipher-text"
+            rows="4"
+            cols="auto"
+            placeholder="Kết quả giải mã ở đây"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script src="./des.js"></script>
+  </body>
+</html>
